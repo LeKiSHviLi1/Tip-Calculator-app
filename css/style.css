@@ -320,16 +320,16 @@ p {
   }
 
   .tipBtn {
-    width: 144px;
-    margin-left: 10px;
+    width: 44%;
+    margin-left: 8px;
   }
   .tipBtnClicked {
-    width: 144px;
-    margin-left: 10px;
+    width: 44%;
+    margin-left: 8px;
   }
   .tipBtnCustom {
-    width: 144px;
-    margin-left: 10px;
+    width: 44%;
+    margin-left: 8px;
   }
   .output {
     width: 100%;
@@ -338,5 +338,15 @@ p {
   }
   .tip {
     margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .resetBtn {
+    font-size: 20px;
   }
 }
