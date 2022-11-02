@@ -1,0 +1,342 @@
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+.container {
+  background-color: hsl(185, 41%, 84%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerLogo {
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.containerBg {
+  width: 920px;
+  height: 480px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  height: 100%;
+  width: 48.5%;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 16px;
+}
+
+.inputInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.bill {
+  display: flex;
+  flex-direction: column;
+}
+.billText {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+.billParagraph {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+}
+.Error {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  color: red;
+  font-weight: 700;
+  display: none;
+}
+.billInput {
+  height: 48px;
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 24px;
+  text-align: right;
+  background-image: url('/images/icon-dollar.svg');
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+.billInputInvalid {
+  height: 48px;
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 24px;
+  text-align: right;
+  border: 1.5px solid red;
+  background-image: url('/images/icon-dollar.svg');
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  outline: none;
+}
+.billInput:hover,
+.billInput:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+.tipInput {
+  display: flex;
+  flex-direction: column;
+}
+.tipText {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  cursor: default;
+}
+.tipBtn {
+  width: 120px;
+  height: 48px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 28px;
+  border-radius: 8px;
+  background-color: hsl(183, 100%, 15%);
+  margin-bottom: 16px;
+  border: none;
+  color: #fff;
+}
+
+.tipBtnClicked {
+  background-color: hsl(172, 67%, 45%);
+  width: 120px;
+  height: 48px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 28px;
+  border-radius: 8px;
+  color: hsl(183, 100%, 15%);
+  margin-bottom: 16px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+.tipBtn:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+.tipBtnCustom {
+  width: 120px;
+  height: 48px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  border-radius: 8px;
+  background-color: hsl(189, 41%, 97%);
+  border: 1px solid hsl(189, 41%, 97%);
+  margin-bottom: 16px;
+  border: none;
+  color: hsl(183, 100%, 15%);
+  text-align: center;
+}
+.tipBtnCustom:hover {
+  outline: 2px solid hsl(185, 41%, 84%);
+}
+.tipBtnCustom:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+  text-align: right;
+}
+
+.people {
+  display: flex;
+  flex-direction: column;
+}
+.peopleText {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+.peopleParagraph {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+}
+
+.peopleNumInput {
+  height: 48px;
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 24px;
+  text-align: right;
+  background-image: url('/images/icon-person.svg');
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+.peopleNumInputInvalid {
+  border: 1.5px solid red;
+  height: 48px;
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 24px;
+  text-align: right;
+  background-image: url('/images/icon-person.svg');
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  outline: none;
+}
+.peopleNumInput:hover,
+.peopleNumInput:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+.output {
+  height: 100%;
+  width: 48.5%;
+  border-radius: 16px;
+  background-color: hsl(183, 100%, 15%);
+  padding: 56px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tip {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  cursor: default;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  color: hsl(172, 67%, 45%);
+}
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #fff;
+}
+p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  color: hsl(184, 14%, 56%);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: default;
+}
+
+.resetBtn {
+  width: 100%;
+  height: 48px;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+  border-radius: 6px;
+  border: none;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.resetBtn:hover {
+  background-color: hsl(185, 41%, 84%);
+}
+.resetBtn:disabled {
+  background-color: hsl(186, 14%, 43%);
+}
+
+/* mobile responsive */
+@media only screen and (max-width: 425px) {
+  .container {
+    height: 100%;
+  }
+  .containerLogo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .containerBg {
+    width: 100%;
+    height: 790px;
+    border-radius: 26px;
+    padding: 32px;
+    flex-direction: column;
+  }
+
+  .input {
+    width: 100%;
+    height: 68%;
+    padding: 0px 16px 32px;
+  }
+
+  .tipBtn {
+    width: 144px;
+    margin-left: 10px;
+  }
+  .tipBtnClicked {
+    width: 144px;
+    margin-left: 10px;
+  }
+  .tipBtnCustom {
+    width: 144px;
+    margin-left: 10px;
+  }
+  .output {
+    width: 100%;
+    height: 32%;
+    padding: 24px;
+  }
+  .tip {
+    margin-bottom: 16px;
+  }
+}

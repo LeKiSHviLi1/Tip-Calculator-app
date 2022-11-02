@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css//reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="containerLogo">
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+      <div class="containerBg">
+        <div class="input">
+          <div class="inputInner">
+            <div class="bill">
+              <div class="billText">
+                <p class="billParagraph">Bill</p>
+                <p class="Error" id="billError">Can't be zero</p>
+              </div>
+              <div>
+                <input
+                  class="billInput"
+                  type="text"
+                  maxlength="6"
+                  id="billId"
+                  placeholder="0"
+                  onfocusout="checker(this)"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder= '0'"
+                />
+              </div>
+            </div>
+            <div class="tipInput">
+              <div>
+                <p class="tipText">Select Tip %</p>
+              </div>
+              <div>
+                <input
+                  type="button"
+                  class="tipBtn"
+                  value="5%"
+                  onclick="clickedBtn(this)"
+                />
+                <input
+                  type="button"
+                  class="tipBtn"
+                  value="10%"
+                  onclick="clickedBtn(this)"
+                />
+                <input
+                  type="button"
+                  class="tipBtn"
+                  value="15%"
+                  onclick="clickedBtn(this)"
+                />
+                <input
+                  type="button"
+                  class="tipBtn"
+                  value="25%"
+                  onclick="clickedBtn(this)"
+                />
+                <input
+                  type="button"
+                  class="tipBtn"
+                  value="50%"
+                  onclick="clickedBtn(this)"
+                />
+                <input
+                  type="number"
+                  class="tipBtnCustom"
+                  placeholder="0"
+                  onclick="clickedBtn(this)"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder= '0'"
+                />
+              </div>
+            </div>
+            <div class="people">
+              <div class="peopleText">
+                <p class="peopleParagraph">Number of People</p>
+                <p class="Error" id="peopleError">Can't be zero</p>
+              </div>
+              <div>
+                <input
+                  class="peopleNumInput"
+                  type="text"
+                  maxlength="4"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                  id="numId"
+                  placeholder="0"
+                  onfocusout="checkerNum(this)"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder= '0'"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="output">
+          <div>
+            <div class="tip">
+              <div class="text">
+                <h2>Tip amount</h2>
+                <p>/ person</p>
+              </div>
+              <h1 id="tipAmount">$0.00</h1>
+            </div>
+            <div class="total">
+              <div class="text">
+                <h2>total</h2>
+                <p>/ person</p>
+              </div>
+              <h1 id="total">$0.00</h1>
+            </div>
+          </div>
+          <button class="resetBtn" onclick="reset()">reset</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
